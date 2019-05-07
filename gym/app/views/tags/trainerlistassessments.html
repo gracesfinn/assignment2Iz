@@ -1,0 +1,70 @@
+#{list items:_assessments.reverse(), as:'assessment'}
+<table class="ui fixed table">
+    <thead>
+
+    <tr>
+        <th><img src="/public/images/datetime.png" height="40px"><br>Date & Time</th>
+        <th><img src="/public/images/weight.png" height="40px"><br>Weight</th>
+        <th><img src="/public/images/chest.png" height="40px"><br>Chest</th>
+        <th><img src="/public/images/thigh.png" height="40px"><br>Thigh</th>
+        <th><img src="/public/images/upperarm.png" height="40px"><br>Upper Arm</th>
+        <th><img src="/public/images/waist.png" height="40px"><br>Waist</th>
+        <th><img src="/public/images/hips.png" height="40px"><br>Hips</th>
+        <th><img src="/public/images/trend.png" height="40px"><br>Trend</th>
+        <th><img src="/public/images/comment.png" height="40px"><br>Comment</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>
+        ${assessment.timeStamp}
+        </td>
+        <td>
+        ${assessment.weight}
+        </td>
+        <td>
+        ${assessment.chest}
+        </td>
+        <td>
+        ${assessment.thigh}
+        </td>
+        <td>
+        ${assessment.upperarm}
+        </td>
+        <td>
+        ${assessment.waist}
+        </td>
+        <td>
+        ${assessment.hips}
+        </td>
+        <td>
+            #{if assessment.trend == true}
+                <i class= "green thumbs up icon"></i>
+            #{/if}
+            #{else}
+                <i class= "red thumbs down icon"></i>
+            #{/else}
+        </td>
+        <td>
+           ${assessment.comment}
+        </td>
+    </tr>
+
+
+
+    </tbody>
+</table>
+
+<form class="ui stacked segment form" action="/trainerdashboard/${_member.id}/addcomment/${assessment.id}" method="POST">
+
+    <div class="field">
+        <label>Add Comment</label>
+        <input placeholder="Comment" type="text" name="comment">
+    </div>
+
+    <button class="ui blue submit button">Update</button>
+</form>
+
+    #{/list}

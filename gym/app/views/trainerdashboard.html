@@ -1,0 +1,43 @@
+#{extends 'main.html' /}
+#{set title:'Trainer Dashboard' /}
+
+#{menu id:"dashboard"/}
+
+<a href="/memberlist"><i class="arrow left icon"></i>Back to Member List</a>
+<table class="ui fixed table">
+    <thead>
+    <tr>
+        <th><i class="big user icon"></i><header class="ui header">
+        ${member.firstname} ${member.lastname}'s Gym Account
+        </header> </th>
+        <th>
+        #{if idealWeight == true}
+            <i class= "big green tachometer alternate icon"></i>
+        #{/if}
+        #{else}
+            <i class= "big red tachometer alternate icon"></i>
+        #{/else}
+            <header class="ui header">Ideal Weight Indicator</header></th>
+
+        <th><i class="big heartbeat icon"></i>${bmiFormatted}<header class="ui header">BMI</header></th>
+
+        <th><i class="big user doctor icon"></i>${weightStatus}<header class="ui header">Weight Status</header></th>
+    </tr>
+
+    </thead>
+    <tbody>
+
+      </tbody>
+</table>
+
+
+
+#{trainerlistassessments assessments:assessments, member:member/}
+
+
+
+
+
+
+
+

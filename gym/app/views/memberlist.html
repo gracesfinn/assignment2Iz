@@ -1,0 +1,47 @@
+#{extends 'main.html' /}
+#{set title:'Members List' /}
+
+#{menu id:"dashboard"/}
+
+
+#{list items:account, as:'members'}
+<table class="ui fixed table">
+    <thead>
+
+    <tr>
+        <th>Name</th>
+        <th>Assessments</th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+         <td>
+             <i class="ui small user icon"></i> <a href="/trainerdashboard/${members.id}">
+        ${members.firstname} ${members.lastname} </a>
+        </td>
+        <td>
+            ${members.assessment.size()}
+        </td>
+        <td><a href="/memberlist/${members.id}/deletemember" ><i class="ui trash icon"></i></a></td>
+
+    </tr>
+
+
+
+    </tbody>
+</table>
+
+
+
+#{/list}
+
+
+
+
+
+
+
+

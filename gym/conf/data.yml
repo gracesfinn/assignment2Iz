@@ -1,0 +1,78 @@
+Assessment(a1):
+  weight: 110.10
+  chest: 42.5
+  thigh: 13.7
+  upperarm: 12.5
+  waist: 32.2
+  hips: 28.5
+  timeStamp: 03 Jan 2018 22.28.22
+Assessment(a2):
+  weight: 95.10
+  chest: 42.5
+  thigh: 13.7
+  upperarm: 12.5
+  waist: 32.2
+  hips: 28.5
+  timeStamp: 26 May 2018 12.18.12
+  trend: true
+Assessment(a3):
+  weight: 110.10
+  chest: 42.5
+  thigh: 13.7
+  upperarm: 12.5
+  waist: 32.2
+  hips: 28.5
+  timeStamp: 03 May 2018 22.28.22
+Assessment(a4):
+  weight: 110.10
+  chest: 42.5
+  thigh: 13.7
+  upperarm: 12.5
+  waist: 32.2
+  hips: 28.5
+  timeStamp: 03 Jun 2018 22.28.22
+Assessment(a5):
+  weight: 110.10
+  chest: 42.5
+  thigh: 13.7
+  upperarm: 12.5
+  waist: 32.2
+  hips: 28.5
+  timeStamp: 03 Jun 2018 22.28.22
+Member(m1):
+  firstname: Homer
+  lastname: Simpson
+  gender: M
+  email: homer@simpson.com
+  password: secret
+  address: Spingfield
+  height: 1.9
+  startWeight: 210
+  assessment:
+    - a1
+    - a2
+    - a5
+Member(m2):
+  firstname: Marge
+  lastname: Simpson
+  gender: F
+  email: marge@simpson.com
+  password: secret
+  address: Spingfield
+  height: 1.50
+  startWeight: 150
+  assessment:
+    - a3
+    - a4
+Member(m3):
+  firstname: Jim
+  lastname: Trainer
+  gender: M
+  email: jim@trainer.com
+  password: secret
+Member(m4):
+  firstname: Jim's
+  lastname: Wife
+  gender: F
+  email: jimswife@trainer.com
+  password: secret
